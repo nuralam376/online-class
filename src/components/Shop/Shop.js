@@ -10,18 +10,21 @@ const Shop = () => {
 	useEffect(() => {
 		const allCourses = [
 			{
+				id: 1,
 				title: "React.js",
 				price: 1000,
 				instructor: "Ryan Dahl",
 				duration: 50,
 			},
 			{
+				id: 2,
 				title: "Node.js",
 				price: 2000,
 				instructor: "Brad Traversy",
 				duration: 30,
 			},
 			{
+				id: 3,
 				title: "Python",
 				price: 5000,
 				instructor: "Maximilian",
@@ -49,6 +52,7 @@ const Shop = () => {
 					<h2 className="text-center mt-5 mb-5">Courses</h2>
 					{courses.map((course) => (
 						<Course
+							key={course.id}
 							course={course}
 							handleCourseClick={handleCourseClick}
 						></Course>
