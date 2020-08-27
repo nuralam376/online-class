@@ -1,5 +1,5 @@
 import React from "react";
-import { ListGroup } from "react-bootstrap";
+import { ListGroup, Image } from "react-bootstrap";
 
 const Cart = (props) => {
 	const totalPrice = props.cart.reduce((total, item) => total + item.price, 0);
@@ -14,6 +14,7 @@ const Cart = (props) => {
 					<ListGroup>
 						{props.cart.map((course) => (
 							<ListGroup.Item key={course.id}>
+								<Image src={course.image} style={{ height: "30px" }} /> -{" "}
 								{course.title} - ${course.price}
 							</ListGroup.Item>
 						))}

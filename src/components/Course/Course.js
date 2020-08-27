@@ -2,16 +2,13 @@ import React from "react";
 import { Row, Col, Image, Button } from "react-bootstrap";
 
 const Course = (props) => {
-	const { title, price, instructor, duration } = props.course;
+	const { title, price, instructor, duration, image } = props.course;
 
 	return (
 		<div>
 			<Row className="bg-dark p-3 mb-3">
 				<Col md={6}>
-					<Image
-						src="https://probella.com/wp-content/uploads/2018/03/React-JS.png"
-						thumbnail
-					/>
+					<Image src={image} thumbnail />
 				</Col>
 				<Col
 					md={6}
