@@ -1,5 +1,7 @@
 import React from "react";
 import { Row, Col, Image, Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Course = (props) => {
 	const { title, price, instructor, duration, image } = props.course;
@@ -24,7 +26,7 @@ const Course = (props) => {
 							variant="info"
 							onClick={() => props.handleCourseClick(props.course)}
 						>
-							Enroll Now
+							<FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon> Enroll Now
 						</Button>
 					</div>
 				</Col>
