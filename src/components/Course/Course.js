@@ -19,6 +19,7 @@ const Course = (props) => {
 						<p>Price : ${price}</p>
 						<p>Instructor : {instructor}</p>
 						<p>Duration : {duration} hours</p>
+						{/* Passing the course info in the shop component */}
 						<Button
 							variant="info"
 							onClick={() => props.handleCourseClick(props.course)}

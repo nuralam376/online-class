@@ -2,6 +2,7 @@ import React from "react";
 import { ListGroup, Image } from "react-bootstrap";
 
 const Cart = (props) => {
+	// Added the total prices of the cart courses
 	const totalPrice = props.cart.reduce((total, item) => total + item.price, 0);
 
 	return (
@@ -11,6 +12,7 @@ const Cart = (props) => {
 					<h4>Ordered Courses : {props.cart.length}</h4>
 					<p>Total Price : ${totalPrice}</p>
 					<h6>Added Courses</h6>
+					{/* Displays the lists of courses  in the cart*/}
 					<ListGroup>
 						{props.cart.map((course) => (
 							<ListGroup.Item key={course.id}>

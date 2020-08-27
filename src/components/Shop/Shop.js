@@ -37,13 +37,17 @@ const Shop = () => {
 		setCourses(allCourses);
 	}, []);
 
+	// Handles the course content user clicks
 	const handleCourseClick = (course) => {
+		// Checks whether the course is already present in the cart
 		let oldCourse = cart.find((items) => items.title === course.title);
 
 		if (oldCourse) {
 			alert("Course already added in the cart");
 			return;
 		}
+
+		// Added the new course in the cart with the previous courses
 		const newCart = [...cart, course];
 		setCart(newCart);
 	};
@@ -53,6 +57,8 @@ const Shop = () => {
 			<Row>
 				<Col md={8}>
 					<h2 className="text-center mt-5 mb-5">Courses</h2>
+
+					{/* Displays the courses using the Course component*/}
 					{courses.map((course) => (
 						<Course
 							key={course.id}
@@ -63,6 +69,7 @@ const Shop = () => {
 				</Col>
 				<Col md={4}>
 					<h2 className="text-center mt-5 mb-5">Cart</h2>
+					{/* Displays the cart info using the Cart Component */}
 					<Cart cart={cart}></Cart>
 				</Col>
 			</Row>
