@@ -27,6 +27,7 @@ const Shop = () => {
 		// Added the new course in the cart with the previous courses
 		const newCart = [...cart, course];
 		setCart(newCart);
+		alert("Course added successfully");
 	};
 
 	return (

@@ -16,8 +16,8 @@ const Cart = (props) => {
 					<ListGroup>
 						{props.cart.map((course) => (
 							<ListGroup.Item key={course.id}>
-								<Image src={course.image} style={{ height: "30px" }} /> -{" "}
-								{course.title} - ${course.price}
+								<Image src={course.image} style={{ height: "30px" }} /> &nbsp;
+								{course.title} ${course.price}
 							</ListGroup.Item>
 						))}
 					</ListGroup>
