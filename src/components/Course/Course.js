@@ -15,7 +15,7 @@ const Course = (props) => {
 					className="text-white d-flex justify-content-md-center align-items-md-center"
 				>
 					<div className="mt-2">
-						<h3>{title}</h3>
+						<h4>{title}</h4>
 						<p>Price : ${price}</p>
 						<p>Instructor : {instructor}</p>
 						<p>Duration : {duration} hours</p>
